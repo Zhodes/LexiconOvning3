@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace LexiconOvning3;
 
-namespace LexiconOvning3
+class Car : Vehicle
 {
-    class Car : Vehicle
+    public Car() : base()
     {
-        public Car() : base()
-        {
-        
-        }
-
-        int MaxPassangers { get; set; }
+    
     }
+
+    int MaxPassangers { get; set; }
 }
