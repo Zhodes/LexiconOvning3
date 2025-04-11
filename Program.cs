@@ -1,10 +1,13 @@
-﻿namespace LexiconOvning3
+﻿namespace LexiconOvning3;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            SystemError.PrintSystemErrors();
-        }
+        
+
+        Utilities.MainMenu();
+
+
     }
 }

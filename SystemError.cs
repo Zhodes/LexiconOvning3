@@ -4,20 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LexiconOvning3
+namespace LexiconOvning3;
+
+abstract class SystemError
 {
-    abstract class SystemError
+    public abstract string ErrorMessage();
+
+    static List<SystemError> SystemErrors = new List<SystemError>() { new TransmissionError(), new BrakeFailureError(), new EngineFailureError()} ;
+
+    public static void PrintSystemErrors()
     {
-        public abstract string ErrorMessage();
-
-        static List<SystemError> SystemErrors = new List<SystemError>() { new TransmissionError(), new BrakeFailureError(), new EngineFailureError()} ;
-
-        public static void PrintSystemErrors()
+        foreach (SystemError error in SystemErrors)
         {
-            foreach (SystemError error in SystemErrors)
-            {
-                Console.WriteLine(error.ErrorMessage());
-            }
+            Console.WriteLine(error.ErrorMessage());
         }
     }
 }

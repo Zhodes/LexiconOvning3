@@ -4,18 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LexiconOvning3
+namespace LexiconOvning3;
+
+class TransmissionError : SystemError
 {
-    class TransmissionError : SystemError
+    public TransmissionError() : base()
     {
-        public TransmissionError() : base()
-        {
 
-        }
+    }
 
-        public override string ErrorMessage()
-        {
-            return "Växellådsproblem: Reparation krävs!";
-        }
+    public override string ErrorMessage()
+    {
+        return "Växellådsproblem: Reparation krävs!";
     }
 }
